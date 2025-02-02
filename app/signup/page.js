@@ -1,11 +1,26 @@
 "use client";
 
 import { useState } from "react";
-import { Input } from "@/components/ui/input";
-import Label from "../components/label";
 import Link from "next/link";
 import { CheckCircle } from "lucide-react";
 import axios from "axios";
+import logo from "../../public/logo.svg";
+import Image from "next/image";
+import { Copy } from "lucide-react"
+ 
+import { Button } from "@/components/ui/button"
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 
 export default function Page() {
   // State to hold email, password, loading, error, and user ID
@@ -14,6 +29,7 @@ export default function Page() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [userId, setUserId] = useState(""); // State to store the user _id
+  const [open, setOpen] = useState(false);
 
   // Handle form submission
   const handleSubmit = async (e) => {
@@ -31,7 +47,7 @@ export default function Page() {
       );
       console.log("Signup successful:", response.data);
       // Set userId state with the received _id
-      setUserId(response.data._id);
+      setUserId(response.data["_id"]);
       // Optionally, refresh the page after successful signup (if needed)
       // window.location.reload(); 
     } catch (err) {
@@ -39,12 +55,50 @@ export default function Page() {
       setError("Signup failed. Please try again.");
     } finally {
       setLoading(false);
+      setOpen(true)
     }
   };
 
   return (
     <section className="md:max-w-md mx-auto mt-5 my-auto border border-gray-500 py-4 px-8 rounded-lg">
-      <h1 className="text-4xl font-semibold">Sign Up</h1>
+        { open && 
+        <Dialog>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Share link</DialogTitle>
+            <DialogDescription>
+              Anyone who has this link will be able to view this.
+            </DialogDescription>
+          </DialogHeader>
+          <div className="flex items-center space-x-2">
+            <div className="grid flex-1 gap-2">
+              <Label htmlFor="link" className="sr-only">
+                Link
+              </Label>
+              <Input
+                id="link"
+                defaultValue={userId}
+                readOnly
+              />
+            </div>
+            <Button type="submit" size="sm" className="px-3">
+              <span className="sr-only">Copy</span>
+              <Copy />
+            </Button>
+          </div>
+          <DialogFooter className="sm:justify-start">
+            <DialogClose asChild>
+              <Button type="button" variant="secondary">
+                Close
+              </Button>
+            </DialogClose>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog> }
+        <div className="flex justify-center py-5">
+            <Image src={logo} alt="logo" className="h-20 w-20" />
+        </div>
+      <h1 className="text-4xl font-semibold text-center">Sign Up</h1>
       <div className="text-sm mt-5 px-4 mb-8 space-y-0.5">
         <span className="flex space-x-2 items-center">
           <CheckCircle className="w-4 h-4 text-red-500" />
@@ -59,6 +113,8 @@ export default function Page() {
           <p>You will receive a User ID to maintain anonymity</p>
         </span>
       </div>
+
+      <h1>{userId}</h1>
 
       <form className="space-y-5" onSubmit={handleSubmit}>
         <div className="mt-8">
