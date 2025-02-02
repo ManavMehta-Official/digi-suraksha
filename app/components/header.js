@@ -11,14 +11,19 @@ export default function Header() {
         <nav className="flex flex-row justify-between items-center mt-5 px-4">
             <Link href="/" className="font-semibold text-xl">DigiSuraksha</Link>
             <div className="space-x-4 flex items-center">
-                <Link href="/crime">
+                <Link href="/crimes">
                     <Button variant="ghost" size="sm">
-                        Crime
+                        Crimes
                     </Button>
                 </Link>
                 <Link href="/report">
-                    <Button variant="fill" size="sm">
+                    <Button variant="ghost" size="sm">
                         Report
+                    </Button>
+                </Link>
+                <Link href="/login">
+                    <Button variant="fill" size="sm">
+                        Sign in
                     </Button>
                 </Link>
                 <DarkModeToggle defaultMode={theme} />
