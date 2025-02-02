@@ -1,6 +1,18 @@
+import React from "react";
 import Seperator from "../components/seperator";
 import DashboardCard from "./components/dashboardCard";
 import Metric from "./components/metric";
+import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
+
+const data = [
+    { name: "Theft", value: 30 },
+    { name: "Assault", value: 25 },
+    { name: "Fraud", value: 20 },
+    { name: "Vandalism", value: 15 },
+    { name: "Cybercrime", value: 10 },
+  ];
+
+  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#A28DFF"];
 
 export default function Page() {
     return (
