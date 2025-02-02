@@ -1,101 +1,99 @@
-import Image from "next/image";
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+    <section class="text-center py-20">
+        <h2 class="text-4xl font-bold">Report Crime Anonymously & Securely</h2>
+        <p class="mt-4 text-gray-400">Empower citizens to report crimes without fear.</p>
+        <button class="mt-6 px-6 py-2 bg-red-500 rounded shadow-lg hover:shadow-2xl transition">
+            Report Now
+        </button>
+    </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <section id="how-it-works" className="py-20 bg-gray-800 text-center">
+        <h2 class="text-4xl font-bold">How It Works</h2>
+        <div class="mt-8 grid md:grid-cols-3 gap-6 px-10">
+            <div class="p-4 bg-gray-700 rounded shadow">
+                <h3 class="text-xl font-semibold">📩 1. Submit a Report</h3>
+                <p class="text-gray-300">Fill out the crime details while keeping your identity hidden.</p>
+            </div>
+            <div class="p-4 bg-gray-700 rounded shadow">
+                <h3 class="text-xl font-semibold">📎 2. Attach Evidence</h3>
+                <p class="text-gray-300">Upload images, videos, or documents to support your report.</p>
+            </div>
+            <div class="p-4 bg-gray-700 rounded shadow">
+                <h3 class="text-xl font-semibold">📢 3. Track Updates</h3>
+                <p class="text-gray-300">Get notified about the progress of your submission.</p>
+            </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+    </section>
+
+
+    <section id="success-stories" class="py-20 text-center">
+        <h2 class="text-3xl font-bold">Success Stories</h2>
+        <p class="mt-4 text-gray-400">See how DigiSuraksha has helped citizens take action.</p>
+        <div class="mt-8 grid md:grid-cols-2 gap-6 px-10">
+            <div class="p-4 bg-gray-800 rounded shadow">
+                <p>"I reported an online scam and got justice within weeks!"</p>
+                <span class="text-gray-400">- Anonymous User</span>
+            </div>
+            <div class="p-4 bg-gray-800 rounded shadow">
+                <p>"This platform gave me the courage to report domestic abuse safely."</p>
+                <span class="text-gray-400">- Survivor</span>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-20 bg-gray-800 text-center">
+        <h2 class="text-3xl font-bold">Law Enforcement Collaboration</h2>
+        <p class="mt-4 text-gray-300">We ensure reports are securely forwarded to the relevant authorities.</p>
+    </section>
+
+    <section class="py-20 text-center">
+        <h2 class="text-3xl font-bold">Resources & Safety Tips</h2>
+        <div class="mt-8 grid md:grid-cols-3 gap-6 px-10">
+            <div class="p-4 bg-gray-700 rounded shadow">
+                <h3 class="text-xl font-semibold">Know Your Rights</h3>
+                <p class="text-gray-300">Understand what legal protections you have as a whistleblower.</p>
+            </div>
+            <div class="p-4 bg-gray-700 rounded shadow">
+                <h3 class="text-xl font-semibold">Stay Anonymous</h3>
+                <p class="text-gray-300">Use VPNs or secure browsers when submitting sensitive reports.</p>
+            </div>
+            <div class="p-4 bg-gray-700 rounded shadow">
+                <h3 class="text-xl font-semibold">Emergency Contacts</h3>
+                <p class="text-gray-300">Find hotlines for urgent help in different regions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-20 bg-gray-800 text-center">
+        <h2 class="text-3xl font-bold">Frequently Asked Questions</h2>
+        <div class="mt-8 px-10">
+            <details class="mb-4 bg-gray-700 p-4 rounded">
+                <summary class="font-semibold">🔒 Is my identity truly anonymous?</summary>
+                <p class="text-gray-300 mt-2">Yes, we do not store any personal data unless you choose to provide it.</p>
+            </details>
+            <details class="mb-4 bg-gray-700 p-4 rounded">
+                <summary class="font-semibold">📌 Can I track my report?</summary>
+                <p class="text-gray-300 mt-2">Yes, you'll receive a unique tracking ID after submission.</p>
+            </details>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 text-center">
+        <h2 class="text-3xl font-bold">Contact Us</h2>
+        <p class="text-gray-400 mt-2">Have questions? Reach out to our support team.</p>
+        <a href="mailto:support@digisuraksha.com" class="mt-4 inline-block px-6 py-2 bg-green-500 rounded shadow">
+            Email Support
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    </section>
+
+    <footer class="bg-gray-900 p-6 text-center text-gray-400">
+        &copy; 2025 DigiSuraksha. All Rights Reserved.
+    </footer>
+    </>
+  )
 }
