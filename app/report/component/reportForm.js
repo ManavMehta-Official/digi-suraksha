@@ -52,7 +52,7 @@ export default function ReportForm() {
 
         try {
             // Make a POST request to your API using Axios
-            const response = await axios.post("https://crime-backend.onrender.com/api/reports/post-report", formData);
+            const response = await axios.post("https://crime-backend.onrender.com/api/reports/post-report", formData, {withCredentials: true});
             console.log("Response from API:", response.data);
             toast.success("Crime report submitted successfully!");
         } catch (error) {

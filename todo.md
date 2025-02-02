@@ -17,3 +17,6 @@ desc
 <!-- date *  -->
 status
 <!-- time * -->
+
+after sign up unique id
+emails are encrypted
