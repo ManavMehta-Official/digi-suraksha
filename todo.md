@@ -3,20 +3,20 @@
 3) Media select
 
 Pages:
-1) All crimes page and status
+<!-- 1) All crimes page and status
 2) Report page
 3) Login page
-4) Sign up Page
+4) Sign up Page -->
 5) admin dashboard
 
 <!-- category  -->
 <!-- summary -->
-desc
+<!-- desc -->
 <!-- location -->
 <!-- radius * -->
 <!-- date *  -->
 status
 <!-- time * -->
 
-after sign up unique id
-emails are encrypted
+<!-- after sign up unique id -->
+<!-- emails are encrypted -->
