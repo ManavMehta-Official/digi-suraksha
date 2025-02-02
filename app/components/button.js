@@ -3,7 +3,7 @@ export default function Button(props) {
     const variants = {
         default: 'bg-black text-white dark:bg-white dark:text-black rounded-md hover:bg-gray-700 dark:hover:bg-gray-300 disabled:opacity-25',
         outline: 'border border-gray-300 dark:border-gray-500 rounded-md hover:bg-gray-300 dark:hover:bg-gray-500 disabled:opacity-25',
-        ghost: 'rounded-md bg-white hover:bg-gray-200 dark:hover:bg-gray-600 dark:bg-slate-950 disabled:opacity-25',
+        ghost: 'rounded-md bg-white hover:bg-gray-200 dark:hover:bg-gray-600 dark:bg-transparent disabled:opacity-25',
         fill: 'rounded-md bg-red-500 text-white hover:bg-red-600 dark:hover:bg-red-700 dark:bg-red-600 disabled:opacity-25'
     }
     const sizes = {

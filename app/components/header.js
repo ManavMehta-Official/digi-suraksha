@@ -11,6 +11,11 @@ export default function Header() {
         <nav className="flex flex-row justify-between items-center mt-5 px-4">
             <Link href="/" className="font-semibold text-xl">DigiSuraksha</Link>
             <div className="space-x-4 flex items-center">
+                <Link href="/admin">
+                    <Button variant="ghost" size="sm">
+                        Dashboard
+                    </Button>
+                </Link>
                 <Link href="/crimes">
                     <Button variant="ghost" size="sm">
                         Crimes
