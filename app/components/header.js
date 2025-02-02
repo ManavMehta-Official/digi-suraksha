@@ -6,6 +6,8 @@ import DarkModeToggle from "./darkModeToggle";
 import useServerDarkMode from "../../hooks/useServerDarkMode";
 import Button from "./button";
 import axios from "axios";
+import Logo from "../../public/logo.svg"
+import Image from "next/image";
 
 export default function Header() {
     const theme = useServerDarkMode();
@@ -39,9 +41,10 @@ export default function Header() {
 
     return (
         <nav className="flex flex-row justify-between items-center mt-5 px-4">
-            <Link href="/" className="font-semibold text-xl">
-                DigiSuraksha
-            </Link>
+            <div className="flex items-center space-x-2">
+            <Image src={Logo} alt="Logo" className="h-8 w-7" />
+            <Link href="/" className="font-semibold text-xl">DigiSuraksha</Link>
+            </div>
             <div className="space-x-4 flex items-center">
                 <Link href="/admin">
                     <Button variant="ghost" size="sm">

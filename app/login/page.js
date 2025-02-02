@@ -5,7 +5,8 @@ import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import Label from "../components/label";
 import Link from "next/link";
-
+import logo from "../../public/logo.svg"
+import Image from "next/image"
 export default function Page() {
     const [formData, setFormData] = useState({
         id: "",
@@ -38,8 +39,11 @@ export default function Page() {
 
     return (
         <section className="md:max-w-md mx-auto mt-5 my-auto border border-gray-500 py-4 px-8 rounded-lg">
-            <h1 className="text-4xl font-semibold">Login</h1>
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <div className="flex mx-auto justify-center py-5">
+                <Image src={logo} alt="logo" className="h-20 w-20" />
+            </div>
+            <h1 className="text-4xl font-semibold text-center">Login</h1>
+            <form className="space-y-5" onSubmit={handleSubmit}>
                 <div className="mt-8">
                     <Label>User ID</Label>
                     <Input
