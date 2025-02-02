@@ -43,6 +43,11 @@ export default function Header() {
                 DigiSuraksha
             </Link>
             <div className="space-x-4 flex items-center">
+                <Link href="/admin">
+                    <Button variant="ghost" size="sm">
+                        Dashboard
+                    </Button>
+                </Link>
                 <Link href="/crimes">
                     <Button variant="ghost" size="sm">
                         Crimes
