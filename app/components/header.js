@@ -46,11 +46,6 @@ export default function Header() {
             <Link href="/" className="font-semibold text-xl">DigiSuraksha</Link>
             </div>
             <div className="space-x-4 flex items-center">
-                <Link href="/admin">
-                    <Button variant="ghost" size="sm">
-                        Dashboard
-                    </Button>
-                </Link>
                 <Link href="/crimes">
                     <Button variant="ghost" size="sm">
                         Crimes

@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 
 export default function Home() {
@@ -8,9 +9,9 @@ export default function Home() {
         <p className="mt-4 text-slate-500 dark:text-gray-400 max-w-md items-center">
         Our secure and anonymous platform allows you to report incidents without fear of exposure.
         </p>
-        <button className="mt-6 px-6 py-2.5 bg-red-500 rounded shadow-lg hover:shadow-2xl transition text-white">
+        <Link href="/report" className="mt-6 px-6 py-2.5 bg-red-500 rounded shadow-lg hover:shadow-2xl transition text-white">
             Report Crime
-        </button>
+        </Link>
     </section>
 
     <section id="how-it-works" className="pb-20 pt-10 bg-gray-50 dark:bg-gray-800 text-center rounded-lg">
@@ -22,7 +23,7 @@ export default function Home() {
                 <h3 className="text-xl text-black dark:text-white font-semibold mb-2">📩 Submit a Report</h3>
                 <p className=" text-gray-700 dark:text-gray-200">Fill out the crime details while keeping your identity hidden.</p>
             </div>
-            <div className="p-4 dark:bg-gray-700 rounded-md shadow  bg-gray-100 dark:bg-red-500 bg-red-500">
+            <div className="p-4 dark:bg-gray-700 rounded-md shadow  bg-gray-100 dark:bg-red-500 ">
                 <h3 className="text-xl text-black dark:text-white font-semibold mb-2">📎 Attach Evidence</h3>
                 <p className="text-gray-700 dark:text-gray-200">Upload images, videos, or documents to support your report.</p>
             </div>
